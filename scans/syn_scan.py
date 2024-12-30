@@ -15,11 +15,15 @@ def syn_scan(target, ports, progress_callback=None):
             port_details = {
                 'port': port,
                 'status': 'open',
-                'protocol': 'TCP',
+                'protocol': 'Syn',
                 'service': port_info.get(port, {}).get('Use', 'Unknown'),
                 'vulnerabilities': port_info.get(port, {}).get('Vulnerabilities', 'N/A'),
                 'attack_methods': port_info.get(port, {}).get('Attack Methods', 'N/A'),
-                'prevention': port_info.get(port, {}).get('Prevention', 'N/A')
+                'prevention': port_info.get(port, {}).get('Prevention', 'N/A'),
+                'real-worldexample': port_info.get(port, {}).get('Real-World Example', 'N/A'),
+                'commonServices': port_info.get(port, {}).get('Common Services', 'N/A'),
+                'misconfigurations': port_info.get(port, {}).get('Misconfigurations', 'N/A'),
+                'securityfeatures': port_info.get(port, {}).get('Security Features', 'N/A')
             }
             open_ports.append(port_details)
 

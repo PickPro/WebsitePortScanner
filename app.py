@@ -96,7 +96,7 @@ def main():
         # Display of Scan Results
         if results:
             df = pd.DataFrame(results)
-            df = df[['port', 'protocol', 'status', 'service', 'vulnerabilities', 'attack_methods', 'prevention']]
+            df = df[['port', 'protocol', 'status', 'service', 'vulnerabilities', 'attack_methods', 'prevention','real-worldexample','commonServices','misconfigurations','securityfeatures']]
             st.subheader("Scan Results")
             st.dataframe(df)
 
